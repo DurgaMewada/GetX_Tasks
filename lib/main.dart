@@ -5,6 +5,8 @@ import 'package:get/get_navigation/src/routes/transitions_type.dart';
 import 'package:getx_state_management/Page_Navigation/View/FirstScreen.dart';
 import 'package:getx_state_management/Page_Navigation/View/SecondScreen.dart';
 
+import 'CRUD/View/CRUD.dart';
+import 'CRUD/View/Components/crud_alertBox.dart';
 import 'Counter_App/View/CounterApp.dart';
 
 void main() {
@@ -20,8 +22,11 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       getPages: [
         //GetPage(name: '/', page: () => CounterApp(),),
-         GetPage(name: '/', page: () => Firstscreen(),transition: Transition.rightToLeft),
-        GetPage(name: '/second', page: () => Secondscreen(),transition: Transition.leftToRight),
+         GetPage(name: '/', page: () => Add(),), GetPage(name: '/home', page: () => CrudOperation(),),
+
+
+        // GetPage(name: '/', page: () => Firstscreen(),transition: Transition.rightToLeft),
+        // GetPage(name: '/second', page: () => Secondscreen(),transition: Transition.leftToRight),
       ],
 
     );
